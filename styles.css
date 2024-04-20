@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(to right, #ff00cc, #3333ff);
+  }
+  
+  .song-selection {
+    text-align: center;
+  }
+  
+  .song-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .song-list li {
+    cursor: pointer;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    margin: 0 10px; 
+  }
+  
+  .song-list li:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  
+  
+  .music-player {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .cover {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  .controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .play-pause-btn {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  .timing-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 5px;
+  }
+  
+  .progress {
+    height: 100%;
+    background-color: #ff00cc;
+    border-radius: 5px;
+  }
+  
+  .play-btn,
+  .pause-btn {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .play-btn::before,
+  .pause-btn::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+  }
+  
+  .play-btn::before {
+    border-width: 15px 0 15px 30px;
+    border-color: transparent transparent transparent #ffffff;
+  }
+  
+  .pause-btn::before {
+    border-width: 0 15px 0 15px;
+    border-color: transparent #ffffff transparent #ffffff;
+  }
+  
+  .play-btn:hover::before,
+  .pause-btn:hover::before {
+    border-color: transparent #cccccc transparent #cccccc;
+  }
+  
+  .play-icon,
+  .pause-icon {
+    width: 100%;
+    height: 100%;
+    fill: #fff;
+  }
+  
+  .pause-icon {
+    display: none;
+  }
+  
+  .play-btn:hover .play-icon {
+    display: none;
+  }
+  
+  .play-btn:hover .pause-icon {
+    display: block;
+  }
+  
